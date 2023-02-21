@@ -1,4 +1,4 @@
-Realice un programa que calcule el índice de masa corporal de una persona, donde le solicite al usuario la estatura en cm y el peso en Kg. 
+2. Realice un programa que calcule el índice de masa corporal de una persona, donde le solicite al usuario la estatura en cm y el peso en Kg. 
 Después imprima como resultado el índice de masa corporal mediante un mensaje que diga “Su IMC es <valor>” redondeado con dos decimales.
 Fórmula: peso (kg) / [estatura (m)]^2
 
