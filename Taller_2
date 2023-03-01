@@ -1,0 +1,48 @@
+print('Opciones','\n', '1: Programa que recive un numero entero positivo y luego imprime los numeros impares desde el uno hasta el nuemero ingresado','\n','2: Programa que calcula el numero factorial de un numero ingresado por el usuario', '\n', '3: Programa que indica si el numero es primo o no; ademas muestra los numeros primos hasta dicho numero')
+opciones = int(input('Seleccione la opcion con un numero: '))
+if opciones == 1:
+    print('Selecionaste la opcion 1!!!!!')
+    i = 0
+    n = int(input('Ingrese un numero entero positivo: '))
+    while i < n:
+     i +=1
+     if i % 2 == 0:
+        print(i,end=',')
+
+elif opciones == 2:
+    print('Seleccionaste la opcion 2!!!!!!!!!')
+    n = int(input("Ingrese un número entero positivo: "))
+    fact = 1
+
+    if n < 0:
+        print("El factorial no está definido para números negativos")
+    elif n == 0:
+        print("El factorial de 0 es 1")
+    else:
+        for i in range(1, n + 1):
+            fact = fact * i
+        print("El factorial de", n, "es", fact)
+
+elif opciones == 3:
+    print('Seleccionaste la opcion 3!!!!!!!!')
+    n = int(input('Ingrese un numero para saber si es primo o no: '))
+numeros_primos = []
+
+if n > 1:
+    for i in range(2, n+1):
+        es_primo = True
+        for j in range(2, i):
+            if i % j == 0:
+                es_primo = False
+                break
+        if es_primo:
+            numeros_primos.append(i)
+
+    if n in numeros_primos:
+        print(n, 'es primo')
+    else:
+        print(n, 'no es primo')
+
+    print('Los numeros primos hasta', n, 'son:', numeros_primos)
+else:
+    print('No es primo')
