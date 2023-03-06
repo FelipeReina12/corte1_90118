@@ -1,0 +1,16 @@
+def calcular_combinaciones(n, r):
+    if r > n:
+        return 0
+    else:
+        numerador = 1
+        denominador = 1
+        for i in range(r):
+            numerador *= n - i
+            denominador *= i + 1
+        return numerador // denominador
+
+n = int(input("Ingrese el número de elementos en el conjunto: "))
+r = int(input("Ingrese el número de muestras sin orden: "))
+
+combinaciones = calcular_combinaciones(n, r)
+print(f"El número de combinaciones binomiales para {n} elementos organizados en {r} muestras es {combinaciones}.")
